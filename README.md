@@ -6,10 +6,6 @@
 
 # npm i formik
 
-# npm i react-router
-
-# npm i react-router-dom
-
 # npm i clsx
 
 # npm i react-icons
@@ -17,6 +13,10 @@
 # npm i axios
 
 #sssssssssssssss
+
+# npm i react-router
+
+# npm i react-router-dom
 
 # npm i react-redux
 
