@@ -38,7 +38,7 @@ export const logoutThunk = createAsyncThunk(
   }
 );
 
-export const getMeThunk1 = createAsyncThunk(
+export const getMeThunk = createAsyncThunk(
   "auth/getMe",
   async (_, thunkAPI) => {
     const saveToken = thunkAPI.getState().auth.token;
