@@ -38,10 +38,8 @@ export const logoutThunk = createAsyncThunk(
   }
 );
 
-
-export const refreshUser  = createAsyncThunk(
-  "auth/refresh",
-
+export const getMeThunk = createAsyncThunk(
+  "auth/getMe",
   async (_, thunkAPI) => {
     const saveToken = thunkAPI.getState().auth.token;
     if (saveToken === null) {
