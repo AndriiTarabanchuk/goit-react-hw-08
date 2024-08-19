@@ -1,4 +1,32 @@
+# npm i redux-persist
+
+# npm install react-hot-toast
+
+# npm i yup
+
+# npm i formik
+
+# npm i react-router
+
+# npm i react-router-dom
+
+# npm i clsx
+
+# npm i react-icons
+
+# npm i axios
+
+#sssssssssssssss
+
+# npm i react-redux
+
+# npm i @reduxjs/toolkit + redux
+
 # React + Vite
+
+# npm i
+
+# npm create vite@latest
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
