@@ -1,0 +1,42 @@
+.wrapReg {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: 0.5 ease;
+  box-shadow: 3px 3px 3px 3px grey;
+}
+.title {
+  padding: 10px;
+}
+.formReg {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.inputReg {
+  max-width: 300px;
+  padding: 10px 8px;
+  font-size: large;
+  border: none;
+  box-shadow: 2px 2px 2px 2px grey;
+  border-radius: 5px;
+  &:active {
+    box-shadow: 3px 3px 3px 3px grey;
+  }
+}
