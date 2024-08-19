@@ -6,10 +6,19 @@ import React from "react";
 
 const AppBar = () => {
   return (
-    <div>
-      <Navigation />
-      <AuthNav />
-      <UserMenu />
+    <div className={css.wrap}>
+      <div>
+        <p>
+          Welcome, <span>user.email</span>
+        </p>
+      </div>
+      <nav className={css.nav}>
+        <ul className={css.list}>
+          <Navigation />
+          <AuthNav />
+          <UserMenu />
+        </ul>
+      </nav>
     </div>
   );
 };
