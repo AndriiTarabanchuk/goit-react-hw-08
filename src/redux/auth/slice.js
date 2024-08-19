@@ -1,4 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
+import {
+  getMeThunk,
+  loginThunk,
+  logoutThunk,
+  registerThunk,
+} from "./operations";
+
 const initialState = {
   count: 20,
   user: {
