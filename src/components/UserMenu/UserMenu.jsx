@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import css from "./UserMenu.module.css";
 import React from "react";
+import { Logout } from "../Logout/Logout";
 
 const UserMenu = () => {
   return (
@@ -9,8 +10,8 @@ const UserMenu = () => {
         <NavLink to="/contacts">Contacts</NavLink>
       </li>
       <li>
-        <NavLink to="/">Log out</NavLink>
-        {/* <Logout /> */}
+        {/* <NavLink to="/">Log out</NavLink> */}
+        <Logout />
       </li>
     </>
   );

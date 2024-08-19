@@ -10,6 +10,7 @@
   box-shadow: 2px 2px 2px 2px grey;
 }
 .list {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
