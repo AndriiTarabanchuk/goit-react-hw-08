@@ -1,6 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { addContact, deleteContact, fetchContacts } from "./operations";
-import { logoutThunk } from "../auth/operations";
+
+import {
+  getMeThunk,
+  loginThunk,
+  logoutThunk,
+  registerThunk,
+} from "./operations";
 
 const initialState = {
   contacts: {
@@ -20,7 +25,7 @@ const handleRejected = (state, action) => {
   state.contacts.loading = false;
   state.contacts.error = action.payload;
 };
-
+fetchContacts;
 const slice = createSlice({
   name: "contacts",
   initialState: initialState,
