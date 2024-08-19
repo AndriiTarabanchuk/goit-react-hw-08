@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
-  getMeThunk,
+  refreshUserThunk,
   loginThunk,
   logoutThunk,
   registerThunk,
@@ -46,7 +46,7 @@ const slice = createSlice({
       .addCase(logoutThunk.fulfilled, (state, action) => {
         return initialState;
       })
-      .addCase(getMeThunk.fulfilled, (state, action) => {
+      .addCase(refreshUserThunk.fulfilled, (state, action) => {
         state.isLoggedIn = true;
         state.user.user = action.payload.user;
         state.user.email = action.payload.email;
@@ -55,7 +55,7 @@ const slice = createSlice({
       .addCase(registerThunk.pending, handlePending)
       .addCase(loginThunk.pending, handlePending)
       .addCase(logoutThunk.pending, handlePending)
-      .addCase(getMeThunk.pending, handlePending);
+      .addCase(refreshUserThunk.pending, handlePending);
   },
 });
 export const authReducer = slice.reducer;
