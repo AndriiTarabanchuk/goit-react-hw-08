@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import css from "./App.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { selectCount } from "../redux/auth/selectors";
-import { incrementCount } from "../redux/auth/slice";
+// import { selectCount } from "../redux/auth/selectors";
+// import { incrementCount } from "../redux/auth/slice";
 import Layout from "./Layout/Layout";
 import HomePage from "../pages/HomePage/HomePage";
 import ContactsPage from "../pages/ContactsPage/ContactsPage";
@@ -16,12 +16,13 @@ import { PrivateRoute } from "../Routes/PrivateRoute";
 
 function App() {
   const dispatch = useDispatch();
-  const count = useSelector(selectCount);
+  // const count = useSelector(selectCount);
   useEffect(() => {
     dispatch(refreshUserThunk());
   }, [dispatch]);
+
   return (
-    <div className={css.root}>
+    <div>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -52,13 +53,13 @@ function App() {
         />
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
-
+      {/* 
       <h1>Vite + React</h1>
       <div className={css.card}>
         <button onClick={() => dispatch(incrementCount())}>
           count is {count}
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

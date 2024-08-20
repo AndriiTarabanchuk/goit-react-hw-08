@@ -7,7 +7,7 @@ import {
 } from "./operations";
 
 const initialState = {
-  count: 20,
+  // count: 20,
   user: {
     name: null,
     email: null,
@@ -26,11 +26,11 @@ const handleRejected = (state, action) => {
 const slice = createSlice({
   name: "auth",
   initialState: initialState,
-  reducers: {
-    incrementCount: (state, action) => {
-      state.count = state.count + 1;
-    },
-  },
+  // reducers: {
+  //   incrementCount: (state, action) => {
+  //     state.count = state.count + 1;
+  //   },
+  // },
   extraReducers: (builder) => {
     builder
       .addCase(registerThunk.fulfilled, (state, action) => {
@@ -59,4 +59,4 @@ const slice = createSlice({
   },
 });
 export const authReducer = slice.reducer;
-export const { incrementCount } = slice.actions;
+// export const { incrementCount } = slice.actions;

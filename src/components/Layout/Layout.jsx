@@ -6,14 +6,14 @@ import AppBar from "../AppBar/AppBar";
 
 const Layout = () => {
   return (
-    <div>
+    <div className={css.wrap}>
       <header>
         <AppBar />
       </header>
       <main>
         <Outlet />
       </main>
-      <footer className={css.footer}>AndriiTarbanchuk, 2024&copy;</footer>
+      <footer className={css.footer}>&copy;AndriiTarbanchuk, 2024</footer>
     </div>
   );
 };

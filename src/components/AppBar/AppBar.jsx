@@ -12,7 +12,7 @@ const AppBar = () => {
 
   return (
     <div className={css.wrap}>
-      <div>
+      <div className={css.userName}>
         {user?.email && (
           <p>
             Welcome, <span>{user.email}</span>
