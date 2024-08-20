@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import css from "./App.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCount } from "../redux/auth/selectors";
@@ -10,11 +10,14 @@ import LoginPage from "../pages/LoginPage/LoginPage";
 import RegistrationPage from "../pages/RegistrationPage/RegistrationPage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import { Route, Routes } from "react-router";
+import { refreshUserThunk } from "../redux/auth/operations";
 
 function App() {
   const dispatch = useDispatch();
   const count = useSelector(selectCount);
-
+  useEffect(() => {
+    dispatch(refreshUserThunk());
+  }, [dispatch]);
   return (
     <div className={css.root}>
       <Routes>

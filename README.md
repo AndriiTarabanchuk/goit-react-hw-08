@@ -1,12 +1,12 @@
-# npm i redux-persist
-
 # npm install react-hot-toast
+
+# sssssssssssssss
+
+# npm i redux-persist
 
 # npm i yup
 
 # npm i formik
-
-#sssssssssssssss
 
 # npm i react-icons
 
