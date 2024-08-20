@@ -9,11 +9,13 @@
   -moz-osx-font-smoothing: grayscale;
   max-width: 1280px;
   margin: 0 auto;
+  color: orange;
+  background-color: antiquewhite;
 }
 
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 p,

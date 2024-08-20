@@ -27,14 +27,14 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 .input {
   font-size: inherit;
   font-weight: inherit;
   color: inherit;
   background-color: inherit;
-  font-weight: bold;
+  /* font-weight: bold; */
   width: calc(100% - 22px);
   padding: 5px 10px;
   background-color: inherit;
@@ -46,6 +46,9 @@
   }
   &:hover {
     box-shadow: 3px 3px 3px 3px grey;
+  }
+  &::placeholder {
+    color: inherit;
   }
 }
 .error {
