@@ -27,7 +27,7 @@ export const loginThunk = createAsyncThunk(
 );
 
 export const logoutThunk = createAsyncThunk(
-  "autj/logout",
+  "auth/logout",
   async (_, thunkAPI) => {
     try {
       await goitApi.post("/users/logout");

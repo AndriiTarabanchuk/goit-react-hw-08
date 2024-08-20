@@ -11,6 +11,8 @@ import RegistrationPage from "../pages/RegistrationPage/RegistrationPage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import { Route, Routes } from "react-router";
 import { refreshUserThunk } from "../redux/auth/operations";
+import { PublicRoute } from "../Routes/PublicRoute";
+import { PrivateRoute } from "../Routes/PrivateRoute";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,10 +25,31 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="contacts" element={<ContactsPage />} />
+          <Route
+            path="contacts"
+            element={
+              <PrivateRoute>
+                <ContactsPage />
+              </PrivateRoute>
+            }
+          />
         </Route>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegistrationPage />} />
+        <Route
+          path="/login"
+          element={
+            <PublicRoute>
+              <LoginPage />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <PublicRoute>
+              <RegistrationPage />
+            </PublicRoute>
+          }
+        />
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
 
