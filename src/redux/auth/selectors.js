@@ -1,4 +1,4 @@
-export const selectCount = (state) => state.auth.count;
+// export const selectCount = (state) => state.auth.count;
 
 export const selectIsLoggedIn = (state) => state.auth.isLoggedIn;
 export const selectUser = (state) => state.auth.user;
