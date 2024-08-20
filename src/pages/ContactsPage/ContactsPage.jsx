@@ -4,7 +4,6 @@ import React from "react";
 const ContactsPage = () => {
   return (
     <div>
-      <p>ContactsPage</p>
       <Contacts />
     </div>
   );

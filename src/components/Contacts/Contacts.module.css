@@ -1,0 +1,11 @@
+.wrap {
+  font-size: large;
+  font-weight: inherit;
+  font-family: inherit;
+  font-style: normal;
+  color: inherit;
+  background-color: inherit;
+}
+.title {
+  padding: 10px;
+}

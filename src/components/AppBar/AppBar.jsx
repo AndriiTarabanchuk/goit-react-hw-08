@@ -13,10 +13,11 @@ const AppBar = () => {
   return (
     <div className={css.wrap}>
       <div className={css.userName}>
+        <b>Contacts book. </b>
         {user?.email && (
-          <p>
-            Welcome, <span>{user.email}</span>
-          </p>
+          <i>
+            Welcome, <span>{user.email}</span>!
+          </i>
         )}
       </div>
       <nav className={css.nav}>
