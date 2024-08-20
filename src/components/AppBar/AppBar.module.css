@@ -4,16 +4,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 10px;
   border-radius: 5px;
 
   box-shadow: 2px 2px 2px 2px grey;
 }
+
 .list {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
   padding-left: 10px;
   margin-top: 0;
@@ -21,6 +24,7 @@
   list-style-type: none;
   & li {
     padding: 10px;
+    white-space: nowrap;
     border-radius: 5px;
     box-shadow: 2px 2px 2px 2px grey;
     transition: 0.5s ease;
