@@ -13,20 +13,20 @@ function ContactCard({ contact }) {
   const dispatch = useDispatch();
 
   return (
-    <div className={css.wrapItem}>
-      <div className={css.innerWrap}>
-        <div className={css.box}>
-          <div className={css.item}>
-            <FaUser className={css.person} />
-            <p className={css.text}>{name}</p>
+    <div className={css.card}>
+      <div className={css.card__container}>
+        <div className={css.card__boxElements}>
+          <div className={css.card__boxItem}>
+            <FaUser className={css.card__icon} />
+            <p className={css.card__item}>{name}</p>
           </div>
-          <div className={css.item}>
-            <FaPhoneAlt className={css.person} />
-            <p className={css.text}>{number}</p>
+          <div className={css.card__boxItem}>
+            <FaPhoneAlt className={css.card__icon} />
+            <p className={css.card__item}>{number}</p>
           </div>
         </div>
 
-        <div className={css.btnBox}>
+        <div className={css.card__boxBtn}>
           {/* <Button>
             <FaEdit size={24} />
           </Button> */}
@@ -35,7 +35,7 @@ function ContactCard({ contact }) {
               dispatch(showModal({ item: contact, operation: "delete" }))
             }
           >
-            <FaXmark size={24} className={css.textBtn} />
+            <FaXmark size={24} className={css.card__textBtn} />
           </Button>
         </div>
       </div>

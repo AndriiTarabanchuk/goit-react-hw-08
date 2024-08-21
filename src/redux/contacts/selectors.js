@@ -21,3 +21,10 @@ export const selectFilteredContactsMemo = createSelector(
     );
   }
 );
+
+//toggled btn Edit/Save
+export const selectorIsEditingCard = (state) => state.contacts.isEditingCard;
+//get data to patchData
+export const selectorContactCard = (state) => state.contacts.contactCard;
+export const selectorContactInnerCard = (state) =>
+  state.contacts.contactInnerCard;

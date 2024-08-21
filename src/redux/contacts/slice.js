@@ -13,6 +13,16 @@ const initialState = {
   filters: {
     name: "",
   },
+
+  isEditingCard: false,
+  contactCard: {
+    name: "",
+    number: "",
+  },
+  contactInnerCard: {
+    name: "",
+    number: "",
+  },
 };
 const handlePending = (state) => {
   state.contacts.loading = true;
@@ -26,7 +36,18 @@ fetchContacts;
 const slice = createSlice({
   name: "contacts",
   initialState: initialState,
-
+  reducers: {
+    editToggleCard: (state, action) => {
+      state.isEditingCard = !state.isEditingCard;
+      state.contactCard = action.payload;
+    },
+    changeItemCard: (state, action) => {
+      state.contactInnerCard = action.payload;
+    },
+    setName: (state, action) => {
+      state.name = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchContacts.fulfilled, (state, action) => {
@@ -75,5 +96,5 @@ const slice = createSlice({
 //         ),
 //         handleRejected
 //       );
-// export const { addContact, deleteContact } = slice.actions;
+export const { editToggleCard, changeItemCard, setName } = slice.actions;
 export const contactsReducer = slice.reducer;

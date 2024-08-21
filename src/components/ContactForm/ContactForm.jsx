@@ -34,7 +34,12 @@ function ContactForm() {
   const handleSubmit = (value, options) => {
     const createdAt = new Date().toISOString();
     // dispatch(addContact({ ...value, createdAt }));
-    dispatch(showModal({ item: { ...value, createdAt }, operation: "add" }));
+    dispatch(
+      showModal({
+        item: { ...value, createdAt, id: nanoid() },
+        operation: "add",
+      })
+    );
     options.resetForm();
   };
 
