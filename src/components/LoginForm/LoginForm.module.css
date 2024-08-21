@@ -21,6 +21,7 @@
 
 .title {
   padding: 10px;
+  font-weight: bold;
 }
 .formLogin {
   display: flex;
@@ -36,6 +37,7 @@
   font-size: large;
   border: none;
   border-radius: 5px;
+  color: inherit;
   background-color: inherit;
   box-shadow: 2px 2px 2px 2px grey;
   transition: 0.5 ease;
@@ -44,5 +46,19 @@
   }
   &:hover {
     box-shadow: 3px 3px 3px 3px grey;
+  }
+  &::placeholder {
+    color: inherit;
+  }
+}
+.question a {
+  color: inherit;
+  /* text-decoration: none; */
+  font-weight: 600;
+  &:hover {
+    color: blue;
+  }
+  &:active {
+    color: red;
   }
 }

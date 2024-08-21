@@ -1,16 +1,17 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import css from "./ContactCard.module.css";
-import { FaPhoneAlt, FaUser } from "react-icons/fa";
-import { MdClose, MdEdit } from "react-icons/md";
+import { FaPhoneAlt, FaUser, FaEdit, FaCheck } from "react-icons/fa";
+import { FaXmark } from "react-icons/fa6";
 import Button from "../Button/Button";
 import { deleteContact } from "../../redux/contacts/operations";
+import Modal from "../Modal/Modal";
+import { selectIsVisibleModal } from "../../redux/modal/selectors";
+import { showModal } from "../../redux/modal/slice";
 
 function ContactCard({ contact }) {
   const { id, name, number } = contact;
   const dispatch = useDispatch();
-  const handleDelete = () => {
-    dispatch(deleteContact(contact.id));
-  };
+
   return (
     <div className={css.wrapItem}>
       <div className={css.innerWrap}>
@@ -24,15 +25,17 @@ function ContactCard({ contact }) {
             <p className={css.text}>{number}</p>
           </div>
         </div>
-        {/* <Button onClick={() => dispatch(deleteContact(contact.id))}>
-        <p className={css.textBtn}>Delete</p>
-      </Button> */}
+
         <div className={css.btnBox}>
-          <Button>
-            <MdEdit size={24} />
-          </Button>
-          <Button onClick={handleDelete}>
-            <MdClose size={24} className={css.textBtn} />
+          {/* <Button>
+            <FaEdit size={24} />
+          </Button> */}
+          <Button
+            onClick={() =>
+              dispatch(showModal({ item: contact, operation: "delete" }))
+            }
+          >
+            <FaXmark size={24} className={css.textBtn} />
           </Button>
         </div>
       </div>

@@ -35,19 +35,22 @@ const LoginForm = () => {
           <Field
             className={css.inputLogin}
             name="email"
-            placeholder="Enter your email"
+            placeholder="Enter your email..."
           />
           <Field
             className={css.inputLogin}
             name="password"
             type="password"
-            placeholder="Enter your password"
+            placeholder="Enter your password..."
           />
           <Button type="submit">
             <p>Login</p>
           </Button>
-          <p>
-            You don't have account?<Link to="/register">Sing up!</Link>
+          <p className={css.question}>
+            You don't have account?
+            <Link className={css.link} to="/register">
+              Sing up!
+            </Link>
           </p>
         </Form>
       </Formik>

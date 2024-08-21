@@ -13,6 +13,7 @@ import { Route, Routes } from "react-router";
 import { refreshUserThunk } from "../redux/auth/operations";
 import { PublicRoute } from "../Routes/PublicRoute";
 import { PrivateRoute } from "../Routes/PrivateRoute";
+import Modal from "./Modal/Modal";
 
 function App() {
   const dispatch = useDispatch();
@@ -50,7 +51,8 @@ function App() {
               <RegistrationPage />
             </PublicRoute>
           }
-        />
+        />{" "}
+        <Route path="/modal" element={<Modal />} />
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
       {/* 
