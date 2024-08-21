@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { nanoid } from "@reduxjs/toolkit";
 import Button from "../Button/Button";
 import { addContact } from "../../redux/contacts/operations";
+import { showModal } from "../../redux/modal/slice";
 
 function ContactForm() {
   const dispatch = useDispatch();
@@ -32,7 +33,8 @@ function ContactForm() {
   };
   const handleSubmit = (value, options) => {
     const createdAt = new Date().toISOString();
-    dispatch(addContact({ ...value, createdAt }));
+    // dispatch(addContact({ ...value, createdAt }));
+    dispatch(showModal({ item: { ...value, createdAt }, operation: "add" }));
     options.resetForm();
   };
 

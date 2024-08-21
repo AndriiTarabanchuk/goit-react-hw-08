@@ -33,25 +33,27 @@ const RegistrationForm = () => {
           <Field
             className={css.inputReg}
             name="name"
-            placeholder="Enter your name"
+            placeholder="Enter your name..."
           />
           <Field
             className={css.inputReg}
             name="email"
-            placeholder="Enter your email"
+            placeholder="Enter your email..."
           />
           <Field
             className={css.inputReg}
             name="password"
             type="password"
-            placeholder="Enter your password"
+            placeholder="Enter your password..."
           />
           <Button type="submit">
             <p>Register</p>
           </Button>
 
-          <p>You already heve account?</p>
-          <Link to="/">Go Home page...</Link>
+          <p className={css.question}>
+            You already heve account?
+            <Link to="/"> Go Home page...</Link>
+          </p>
         </Form>
       </Formik>
     </div>

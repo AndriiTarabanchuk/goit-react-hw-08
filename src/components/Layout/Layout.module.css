@@ -1,9 +1,17 @@
 .wrap {
   padding: 8px;
+  position: relative;
 }
-.footer {
+.visualliHidden {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  opacity: 0.5;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
