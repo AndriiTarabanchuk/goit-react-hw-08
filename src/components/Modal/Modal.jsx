@@ -26,7 +26,7 @@ const Modal = () => {
   const handleOperation = () => {
     console.log(itemModal.item);
     switch (itemModal.operation) {
-      case "del":
+      case "delete":
         dispatch(deleteContact(itemModal.item.id));
         break;
       case "add":
