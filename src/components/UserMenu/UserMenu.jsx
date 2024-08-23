@@ -1,9 +1,12 @@
 import { NavLink } from "react-router-dom";
 import css from "./UserMenu.module.css";
 import React from "react";
-import { Logout } from "../Logout/Logout";
+import { logoutThunk } from "../../redux/auth/operations";
+import { useDispatch } from "react-redux";
 
 const UserMenu = () => {
+  const dispatch = useDispatch();
+
   return (
     <>
       <li className={css.item}>
@@ -11,7 +14,9 @@ const UserMenu = () => {
       </li>
       <li>
         {/* <NavLink to="/">Log out</NavLink> */}
-        <Logout />
+        <button className={css.btn} onClick={() => dispatch(logoutThunk())}>
+          Logout
+        </button>
       </li>
     </>
   );
