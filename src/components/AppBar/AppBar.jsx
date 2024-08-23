@@ -7,19 +7,19 @@ import React from "react";
 import { selectIsLoggedIn, selectUser } from "../../redux/auth/selectors";
 
 const AppBar = () => {
-  const user = useSelector(selectUser);
+  // const user = useSelector(selectUser);
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
     <div className={css.wrap}>
-      <div className={css.userName}>
-        <b>Contacts book. </b>
+      {/* <b>Contacts book. </b> */}
+      {/* <div className={css.userName}>
         {user?.email && (
           <i>
             Welcome, <span>{user.email}</span>!
           </i>
         )}
-      </div>
+      </div> */}
       <nav className={css.nav}>
         <ul className={css.list}>
           <Navigation />

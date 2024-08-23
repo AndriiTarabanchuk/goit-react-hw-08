@@ -1,15 +1,30 @@
 .btn {
-  padding: 0;
+  font-weight: bold;
+  white-space: nowrap;
+  border-radius: 5px;
+  padding: 10px;
   font-family: inherit;
   border: none;
   font-size: inherit;
-  font-weight: inherit;
+
+  box-shadow: 2px 2px 2px 2px grey;
   color: inherit;
   background-color: inherit;
+  transition: 0.5s ease;
   &:hover {
+    box-shadow: 3px 3px 3px 3px grey;
     color: blue;
   }
   &:active {
+    box-shadow: 1px 1px 1px 1px grey;
+
     color: red;
   }
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
