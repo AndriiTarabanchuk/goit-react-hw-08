@@ -14,8 +14,7 @@ const UserMenu = () => {
       <li>
         <NavLink to="/contacts">Contacts</NavLink>
       </li>
-      <li className={css.box}>
-        {/* <NavLink to="/">Log out</NavLink> */}
+      <li>
         <div className={css.userName}>
           {user?.email && (
             <i>
@@ -23,6 +22,9 @@ const UserMenu = () => {
             </i>
           )}
         </div>
+      </li>
+      <li>
+        {/* <NavLink to="/">Log out</NavLink> */}
         <button className={css.btn} onClick={() => dispatch(logoutThunk())}>
           Logout
         </button>
